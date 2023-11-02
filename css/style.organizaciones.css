@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    padding: 0;
+    margin: 0;
+    background-color: #0e171f;
+    font-family: 'EB Garamond', serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.barra{
+    background-color: #916a70; 
+    height: 30px; 
+    width: 100%; 
+    top: 0; 
+    z-index: 100;
+}
+  
+.texto{
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    font-size: 13px;
+    font-family: 'EB Garamond', serif;
+}
+
+
+a{
+    font-family: 'EB Garamond', serif;
+    font-size: 20px; 
+    margin-bottom: 20px;
+}
+  
+p{
+    padding-bottom: 5px;
+    font-family: 'EB Garamond', serif;
+    line-height: 0;
+}
+
+
+  i{
+    color: #916a70;
+  }
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 20vh; 
+  }
+  
+  .button {
+      display: flex;
+      justify-content: space-around; 
+      align-items: center; 
+  }
+  
+  .icon {
+    align-items: center; 
+    margin: 0 20px;
+    font-size: 30px;
+}
+
+nav ul li {
+    justify-content: center;
+    display: inline-block;
+    padding: 13px 35px;
+    margin: 10px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    transition: color 0.5s;
+    
+  }
+  nav ul li a {
+  text-decoration: none;
+  color: #000000;
+  }
+  nav ul li::after {
+    content: "";
+    background: #e4ced0;
+    width: 100%;
+    height: 0;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    opacity: 0;
+    transition: height 0.5s, opacity 0.5s;
+  }
+  nav ul li:hover {
+    font-weight: bold;
+  }
+  nav ul li:hover::after {
+    height: 100%;
+    opacity: 1;
+  }
+
+.coint1{
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 0;
+    margin-right: 40px;
+    
+    
+}
+  
+  
+  .meta{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+}
+
+.linea{
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid #916a70;
+    margin-top: 30px;
+}
+
+.container{
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.card.section{
+    display: grid;
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+.card-header{
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    color: #916a70;
+}
+
+.card{
+    background-color: rgb(180, 219, 231);
+    padding: 1.75rem;
+    border-radius: 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-body{
+    font-family: 'EB Garamond', serif;
+    line-height: 2;
+}
+
+.card .card-body p{
+    margin: 0;
+    height: 300px;
+    max-width: 100%;
+}
+
+.card .card-body a{
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.2rem;
+    color: #0e171f;
+    background-color: #e4ced0;
+    border-radius: 1.75rem;
+    margin-top: 1.2rem;
+    padding: 10px 20px;
+    text-align: center;
+    justify-content: center;
+    margin-left: 460px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.card .card-body a:hover{
+    background-color: transparent;
+    border-color: #0e171f;
+    color: white;
+    background-color: #916a70;
+    border-radius: 1.75rem;
+    transition: background-color 0.4s ease-in, color 0.4s ease-in;
+}
+

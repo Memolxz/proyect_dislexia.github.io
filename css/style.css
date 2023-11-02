@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+3D&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tai+Heritage+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.barra{
+  background-color: #916a70; 
+  height: 30px; 
+  width: 100%; 
+  top: 0; 
+  z-index: 100;
+}
+
+.texto{
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  font-size: 13px;
+  font-family: 'EB Garamond', serif;
+}
+
+.container{
+  align-items: flex-start;
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+}
+
+.card-grid{
+  display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+}
+
+.background{
+  position: absolute;
+  background-position: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-size: cover;
+  border-radius: 24px;
+  transition: 
+  filter 200ms linear,
+  transform 200ms linear
+  ;
+}
+
+.card{
+  position: relative;
+  flex: 1;
+  margin: 10px;
+  transition: transform 0.3s;
+  transform: scale(1);
+}
+
+.card::before{
+  content: "";
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+  filter: blur(5px);
+}
+
+.card:hover.background{
+  transform: scale(1.05);
+
+}
+
+.card:hover {
+  transform: scale(1.5); /* Aplica el zoom al pasar el cursor */
+  filter: blur(0);
+}
+
+/*TEXTBOX PARTE SUPERIOR*/
+.textbox{
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.textbox span{
+  color:#916a70;
+  display: block;
+}
+/*"DISLEXIA"*/
+.texto-superior{
+    font-size: 80px;
+    letter-spacing: 8px;
+    margin-bottom: 20px;
+    margin-top: 120px;
+    position: relative;
+    animation: text 2s 1;
+    font-family: 'Tai Heritage Pro', serif;
+}
+/*"CONCEPTOS INFORMATIVOS"*/
+.texto-inferior{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Tai Heritage Pro', serif;
+}
+
+
+.video1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 100px); /* 100% del ancho del HTML con 50px de margen en cada lado */
+  margin: 50px;
+  margin-bottom: 30px;
+}
+
+
+/*TRANFORMA EL TEXTO INFERIOR EN BLANCO CUANDO APOYAS EL POINTER*/
+@keyframes text {
+    0%{
+        margin-bottom: -40px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -40px;
+    }
+}
+
+
+.linea{
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid #916a70;
+}
+
+/*NAVBAR*/
+nav ul li {
+  justify-content: center;
+  display: inline-block;
+  padding: 13px 35px;
+  margin: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s;
+}
+nav ul li a {
+text-decoration: none;
+color: #000000;
+}
+nav ul li::after {
+  content: "";
+  background: #e4ced0;
+  width: 100%;
+  height: 0;
+  border-radius: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 0;
+  transition: height 0.5s, opacity 0.5s;
+}
+nav ul li:hover {
+  font-weight: bold;
+}
+nav ul li:hover::after {
+  height: 100%;
+  opacity: 1;
+}
+
+
+
+/*SUBTÍTULOS*/
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Tai Heritage Pro', serif;
+    color: #2f004f;
+}
+
+
+/*DIRECCIÓN NAV AL FINAL DE LA WEB*/
+h5{
+  font-family: 'EB Garamond', serif;
+}
+
+
+/*CONFIGURACIONES PÁRRAFO*/
+p{
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  font-family: 'EB Garamond', serif;
+  line-height: 2;
+}
+/*BOLD*/
+strong{
+    color: #916a70;
+}
+
+
+body{
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #ece4f7;
+    justify-content: center;
+}
+
+
+/*CONFIGURACIONES LISTAS*/
+ul li{
+    margin-right: 50px;
+    margin-left: 50px;
+    font-family: 'EB Garamond', serif;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: inherit;
+}
+
+/*TEXTO PRINCIPAL*/
+.maintexto {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    margin-top: 500px;
+}
+.search-form {
+    display: flex;
+}
+
+
+/*VIDEO APRENDIZAJE Y MUNDO SOCIAL*/  
+.video{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.columns {
+  display: flex;
+  flex-direction: row; /* Alinear los elementos en una fila (horizontalmente) */
+}
+
+.column1, .column3 {
+  flex: 1; /* Hace que ambas columnas se expandan igualmente en el espacio disponible */
+  max-width: 50%; /* Establece un ancho máximo para cada columna (puedes ajustarlo según tus necesidades) */
+  padding: 10px; /* Agrega espaciado entre las columnas */
+  box-sizing: border-box; /* Asegura que el padding no incremente el ancho máximo */
+}
+
+
+.column1{
+  margin-left: 200px;
+}
+
+/*FUENTE TÍTULOS COLUMNAS*/
+a{
+  font-family: 'Playfair Display', serif;
+  color: #000000;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+i{
+  color: #916a70;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 20vh; 
+}
+
+.button {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.icon {
+    align-items: center; 
+    margin: 0 20px;
+    font-size: 30px;
+}
+
+
+.meta{
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+}
+.centrar{
+  text-align: center;
+}
